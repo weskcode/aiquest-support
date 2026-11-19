@@ -1,0 +1,43 @@
+name: Support Request
+description: Report a bug, curriculum typo, or question about AI Quest
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        GitHub issues are public. Do not include personal contact details or private files. For private inquiries, email **weskcode@duck.com**.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Bug report
+        - Curriculum / question feedback
+        - Export / import or progress issue
+        - Reminders or widget
+        - Accessibility
+        - General question
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: AI Quest version
+      description: Found in Settings → About AI Quest
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS version & iPhone model
+      placeholder: e.g. iOS 26.0, iPhone 16 Pro
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: Describe what you expected, what happened, and steps to reproduce.
+    validations:
+      required: true
